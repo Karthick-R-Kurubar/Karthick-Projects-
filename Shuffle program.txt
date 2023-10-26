@@ -1,0 +1,20 @@
+import java.util.*;
+
+ public class Shuffle {
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+        int[] array = {1, 2, 3, 4, 5, 6, 7};
+        // Array created with values.
+        Random shuff = new Random();
+        // creating a Random object.
+        for (int i = array.length - 1; i > 0; i--) {
+            // Generate a random index from 0 to i
+            int j = shuff.nextInt(i + 1);
+            // Swap the elements at i and j
+            int temp = array[i];
+            array[i] = array[j];
+            array[j] = temp;
+        }
+        System.out.println(Arrays.toString(array));
+    }
+}

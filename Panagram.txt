@@ -1,0 +1,35 @@
+public class Main {
+    static boolean checkPangram(String str) {
+        // Create an array to store the occurrence of alphabets
+        boolean[] alphabetMarker = new boolean[26];
+
+        // Convert the string to char array
+        char[] strArray = str.toCharArray();
+
+        // Iterate through the char array and mark the alphabets present
+        for (char c : strArray) {
+            if (Character.isLetter(c)) {
+                int index = Character.toLowerCase(c) - 'a';
+                alphabetMarker[index] = true;
+            }
+        }
+
+        // Check if all alphabets are present
+        for (boolean marker : alphabetMarker) {
+            if (!marker) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    public static void main(String[] args) {
+        String str =  "The quick brown fox jumps over the lazy dog";
+        if (checkPangram(str)) {
+            System.out.println("\"" + str + "\" is a pangram.");
+        } else {
+            System.out.println("\"" + str + "\" is not a pangram.");
+        }
+    }
+}

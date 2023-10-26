@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> //This is an HTML element used to provide metadata about the HTML document. In this case, it's used for defining the viewport 
+//A value of 1.0 means that the page is not zoomed in or out initially, and it appears at 100% zoom.
+  <title>calculator</title>  // title of the web page 
+  <link href="in-30-layout.css" rel="stylesheet" type="text/css"> // this href is used to connect our css style with html document.
+</head>
+<body>
+  <div class="calculator">
+    <form>
+      <div class="display">
+        <input type="text" id="display" name="display">
+      </div>
+      <input type="button" value="AC" onclick="document.getElementById('display').value = ''">
+      <input type="button" value="9">
+      <input type="button" value="8">
+      <input type="button" value="7">
+      <input type="button" value="+">
+      <input type="button" value="4">
+      <input type="button" value="5">
+      <input type="button" value="6">
+      <input type="button" value="-">
+      <input type="button" value="D" onclick="display.value = display.value.toString().slice(0,-1)">
+      <input type="button" value="1">
+      <input type="button" value="2">
+      <input type="button" value="3">
+      <input type="button" value="%">
+      <input type="button" value="/">
+      <input type="button" value=".">
+      <input type="button" value="0">
+      <input type="button" value="*">
+      <input type="button" value="00">
+      <input type="button" value="=" onclick="display.value = eval(display.value)" class="equal">
+    </form>
+  </div>
+</body>
+</html>
+
+.calc-body {
+  width: 275px;
+  margin: auto;
+  min-height: 400px;
+  box-shadow: 0 8px 50px -7px rgba(22, 114, 77, 0.7);
+  background: #3A4655;
+}
+
+.calc-screen {
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+}
+
+.calc-container {
+  width: 150px;
+  margin: auto;
+}
+
+#calc-operation {
+  font-size: 1.3rem;
+  text-align: right;
+  color: #727B86;
+  padding-bottom: 0.5rem;
+}
+
+#calc-typed {
+  font-size: 2rem;
+  text-align: left;
+  color: #fff;
+}
+
+#user-input {
+  font-size: 2.5rem;
+  text-align: left;
+  color: #fff;
+  width: 150%;
+}
+
+.calc-button-row {
+  display: table;
+  text-align: left;
+}
+
+.calc-button-row button {
+  display: table-cell;
+  width: 25%;
+  background: #425062;
+  color: #fff;
+  height: 65px;
+  font-size: 1.3rem;
+  border: none;
+  border-color: #3C4857;
+  border-width: 1px 1px 0px 0;
+  border-style: solid;
+}
+
+.calc-button-row button:nth-child(4n) {
+  border-right: none;
+}
+
+.calc-button-row button:active {
+  position: relative;
+  top: 1px;
+}
+
+.calc-button-row button:hover {
+  background: #3e4b5c;
+}
+
+.ac {
+  margin-right: auto;
+  padding: 10px;
+  text-align: right;
+  color: #ff7665;
+}
+
+.calc-button-row button.opt {
+  color: #ffbc56;
+}
+

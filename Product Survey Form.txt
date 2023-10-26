@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Survey Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="group">
+    <header class="header">
+      <h1 id="title" class="text-center">CUSTOMER SURVEY FORM </h1>
+    </header>
+    <form id="survey-form">
+      <div class="form-group">
+        <strong>
+          <label id="name-label" for="name">Name</label><br><br>
+        </strong>
+        <input type="text" name="name" id="name" class="form-control" placeholder="Enter your name" required/>
+      </div>
+      <div class="form-group">
+        <strong>
+          <label id="email-label" for="email">Email</label><br><br>
+        </strong>
+        <input type="email" name="email" id="email" class="form-control" placeholder="Enter your Email" required/>
+      </div>
+      <div class="form-group">
+        <strong>
+          <label id="number-label" for="number">Age <span class="clue">(optional)</span></label><br><br>
+        </strong>
+        <input type="number" name="age" id="number" min="10" max="99" class="form-control" placeholder="Age"/>
+      </div>
+      <div class="form-group">
+        <p>Is this your first time using our products & services?</p>
+        <label>
+          <input type="radio" name="first-time" value="Yes" class="input-radio"/>Yes
+        </label><br><br>
+        <label>
+          <input type="radio" name="first-time" value="No" class="input-radio"/>No
+        </label><br><br>
+      </div>
+      <div class="form-group">
+        <p>Would you suggest our products and services to your friends and colleagues?</p>
+        <label>
+          <input type="radio" name="suggest" value="Yes" class="input-radio"/>Yes
+        </label><br><br>
+        <label>
+          <input type="radio" name="suggest" value="No" class="input-radio"/>No
+        </label><br><br>
+      </div>
+      <div class="form-group">
+        <p>Do you have suggestions to improve our services?</p>
+        <textarea id="comments" class="input-textarea" name="comment" placeholder="Enter your comment here..."></textarea>
+      </div>
+      <button type="submit" id="submit" value="submit" class="submit-button">Submit</button>
+    </form>
+  </div>
+</body>
+</html>
+
+
+:root{
+  color-white: #f3f3f3;
+  color-fuchsia: #db7093;
+  color-darkblue-alpha: rgba(27,27,50,0.8);
+  color-green: #37af65;
+}
+body{
+  font-family: 'Poppins',sans-serif;
+  font-size: 1rem;
+  line-height: 1.4;
+  margin: 0;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #FFC0CB;
+}
+h1{
+  font-weight: 400;
+  line-height: 1.2;
+}
+p{
+  font-size: 1.125rem;
+  font-weight: bold;
+}
+h1,p{
+  margin-top: 0;
+  margin-bottom: 0.9rem;
+}
+label{
+  font-size: 1.125rem;
+  margin-bottom: 0.5rem;
+}
+input,button,select,textarea{
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+button{
+  border: none;
+}
+.group{
+  width: 100%;
+  margin: 3.125rem auto 0 auto;
+}
+
+.header{
+  padding: 0 0.625rem;
+  margin-bottom: 1.875rem;
+}
+.description{
+  font-style: italic;
+  font-weight: 200;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.4);
+}
+.clue{
+  margin-left: 0.25rem;
+  font-size: 0.9rem;
+  color: #e4e4e4;
+}
+.text-center{
+  text-align: center;
+}
+form{
+  background: var(--color-fuchsia);
+  padding: 2.5rem 0.625rem;
+  border-radius: 0.25rem;
+  margin-bottom: 50px;
+  display: inline-block;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.form-group{
+  margin: 0 auto 1.25rem auto;
+  padding: 0.25rem;
+}
+.form-control{
+  display: block;
+  width: 100%;
+  height: 2.375rem;
+  padding: 0.375rem 0.75rem;
+  color: #495057;
+  background-color: #fff;
+  background-chip: padding-box;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out;
+  box-shadow: 0.15s ease-in-out;
+}
+.form-control:focus{
+  border-color: #80bdff;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0,123,255,0.25);
+}
+.input-radio,.input checkbox{
+  display: inline-block;
+  margin-right: 0.625rem;
+  min-height: 1.25rem;
+  min-width: 1.25rem;
+}
+.input-textarea{
+  min-height: 120px;
+  width: 600px;
+  padding: 0.625rem;
+  resize: vertical;
+  border-radius: 5px;
+}
+.submit-button{
+  display: block;
+  width: 100px;
+  padding: 0.75rem;
+  background: #fff8dc;
+  color: inherit;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  float: right;
+  margin-right: 7px;
+}
+
+

@@ -1,0 +1,6 @@
+let array = []; // enter the array elements
+
+array.sort(function(a, b) {
+  return b - a;  //it compares the two numbers if the second number is greater than first number by the value..
+});
+console.log(array);
